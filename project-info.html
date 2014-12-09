@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Date-Revision-yyyymmdd" content="20141209" />
     <meta http-equiv="Content-Language" content="en" />
-    <title>TEAM Engine &#x2013; Overview</title>
+    <title>TEAM Engine &#x2013; Project Information</title>
     <link rel="stylesheet" href="./css/apache-maven-fluido-1.3.1.min.css" />
     <link rel="stylesheet" href="./css/site.css" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
@@ -76,10 +76,12 @@
                 <ul class="nav nav-list">
                     <li class="nav-header">Getting Started</li>
                               
-      <li class="active">
+      <li>
   
-            <a href="#"><i class="none"></i>Overview</a>
-          </li>
+                          <a href="index.html" title="Overview">
+          <i class="none"></i>
+        Overview</a>
+            </li>
                 
       <li>
   
@@ -102,13 +104,27 @@
         Tester's Guide</a>
             </li>
                               <li class="nav-header">Project Documentation</li>
-                                                                                                  
+                                                                                                      
+      <li class="active">
+  
+            <a href="#"><i class="icon-chevron-down"></i>Project Information</a>
+                  <ul class="nav nav-list">
+                    
       <li>
   
-                          <a href="project-info.html" title="Project Information">
-          <i class="icon-chevron-right"></i>
-        Project Information</a>
-                  </li>
+                          <a href="license.html" title="Project License">
+          <i class="none"></i>
+        Project License</a>
+            </li>
+                    
+      <li>
+  
+                          <a href="issue-tracking.html" title="Issue Tracking">
+          <i class="none"></i>
+        Issue Tracking</a>
+            </li>
+              </ul>
+        </li>
                               <li class="nav-header">About</li>
                               
       <li>
@@ -138,65 +154,21 @@
                 
         <div id="bodyColumn"  class="span9" >
                                   
-            
-  
-  
-    <h1>Overview</h1>
-    
-<p>
-    The Test, Evaluation, And Measurement (TEAM) Engine is a test harness that executes 
-    test suites written using the OGC Compliance Test Language (CTL) or the <a class="externalLink" href="http://testng.org/" target="_blank">TestNG framework</a>. It is typically used to verify specification 
-    compliance and is the official test harness of the <a class="externalLink" href="http://cite.opengeospatial.org/" target="_blank">OGC Compliance Testing Program</a> (CITE), where it is used to certify 
-    implementations of OGC and ISO geomatics standards in the 19100 series.
-    </p>
-    
-<p>
-    TEAM Engine is a Java application that provides command-line and web interfaces to 
-    execute test suites. A REST API is also available to run TestNG-based suites. A Java 
-    runtime environment is necessary (JDK 7 is recommended), and <a class="externalLink" href="http://tomcat.apache.org/" target="_blank">Apache Tomcat 7</a> is required to host the web application.
-    </p>
-    
-<p>
-    When a CTL test suite is executed, the source scripts are transformed into a collection 
-    of XSLT (v2.0) templates, one for each test (see Figure 1). See OGC document <a class="externalLink" href="http://portal.opengeospatial.org/files/?artifact_id=33085" target="_blank">06-126</a> for descriptions 
-    of CTL elements. A form may be presented to the user to collect test input parameters. 
-    The starting test is then called and the suite is executed using the Saxon XSLT processor. 
-    Test outputs are written to log files as the test run proceeds.
-    </p>
-    
-<div class="figure">
-      <b>Figure 1 - CTL test execution</b>
-      
-        
-<p align="center"><img src="./images/ctl-execution.png" alt="Fig. 1 - CTL test execution" /></p>
-      
-    </div>
-    
-<p>
-    A light-weight plugin mechanism is provided by the <i>teamengine-spi</i> module; it 
-    enables support for alternative test controllers that can be invoked using a REST-like 
-    API. The UML diagram in Figure 2 summarizes the essential design. A test controller 
-    must implement the <tt>TestSuiteController</tt> and <tt>TestRunExecutor</tt> 
-    interfaces.
-    </p>
-    
-<div class="figure">
-      <b>Figure 2 - Extensibility framework for alternative test runners</b>
-      
-        
-<p align="center"><img src="./images/teamengine-spi.png" alt="Fig. 2 - Extensibility framework" /></p>
-      
-    </div>
-
-    
-<p>
-    Executable test suites are automatically discovered using the Java <a class="externalLink" href="http://docs.oracle.com/javase/7/docs/api/java/util/ServiceLoader.html" target="_blank">ServiceLoader 
-    facility</a>. A service provider is identified by placing the appropriate configuration file 
-    in the resource directory META-INF/services. The file contains the fully-qualified name of 
-    a class that implements the TestSuiteController interface.
-    </p>
-  
-
+            <div class="section">
+<h2><a name="Project_Information"></a>Project Information</h2>
+<p>This document provides an overview of the various documents and links that are part of this project's general information. All of this content is automatically generated by <a class="externalLink" href="http://maven.apache.org">Maven</a> on behalf of the project.</p>
+<div class="section">
+<h3><a name="Overview"></a>Overview</h3>
+<table border="0" class="table table-striped">
+<tr class="a">
+<th>Document</th>
+<th>Description</th></tr>
+<tr class="b">
+<td><a href="license.html">Project License</a></td>
+<td>This is a link to the definitions of project licenses.</td></tr>
+<tr class="a">
+<td><a href="issue-tracking.html">Issue Tracking</a></td>
+<td>This is a link to the issue management system for this project. Issues (bugs, features, change requests) can be created and queried using this link.</td></tr></table></div></div>
                   </div>
             </div>
           </div>
