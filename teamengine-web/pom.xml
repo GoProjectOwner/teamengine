@@ -160,6 +160,15 @@
         </executions>
       </plugin>
     </plugins>
+    <testResources>
+      <testResource>
+        <directory>${basedir}/src/test/resources</directory>
+        <filtering>true</filtering>
+        <includes>
+          <include>*.properties</include>
+        </includes>
+      </testResource>
+    </testResources>
   </build>
 
   <profiles>
